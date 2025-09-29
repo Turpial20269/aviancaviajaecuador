@@ -21,13 +21,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avianca - Find cheap tickets and flights</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/calendar.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrsasign/10.1.0/jsrsasign-all-min.js"></script>
 
     <!-- ✅ limpiar localStorage al cargar -->
@@ -39,28 +39,28 @@
     </script>
 
     <!-- START -->
-    <script src="./js/functions.js"></script>
+    <script src="js/functions.js"></script>
 </head>
 <body class="sb-hidden">
 
     <!-- ON LOADER -->
     <div class="loader show">
-        <img src="./assets/svg/plane-loader.gif">
+        <img src="assets/svg/plane-loader.gif">
     </div>
 
     <!-- ON CONVERS | DESTINATIONS -->
     <div class="cover" id="cover-destinations">
         <div class="cover--main">
             <div class="cover--header">
-                <a id="close-modal"><img src="./assets/svg/left_arrow.png"></a>
+                <a id="close-modal"><img src="assets/svg/left_arrow.png"></a>
                 <h2 id="search-label">Origen</h2>
-                <a id="close-modal"><img src="./assets/svg/x_icon.png"></a>
+                <a id="close-modal"><img src="assets/svg/x_icon.png"></a>
             </div>
 
             <div class="cover--body">
                 <div class="search--input--container">
                     <input type="text" class="search--input">
-                    <img class="search--input--icon" src="./assets/svg/takeoff_icon.png">
+                    <img class="search--input--icon" src="assets/svg/takeoff_icon.png">
                     <span id="search-input-label" class="search--input--label">Origen</span>
                 </div>
                 <div id="destinations"></div>
@@ -72,9 +72,9 @@
     <div class="cover" id="cover-resume">
         <div class="cover--main">
             <div class="cover--header">
-                <a id="close-modal"><img src="./assets/svg/left_arrow.png"></a>
+                <a id="close-modal"><img src="assets/svg/left_arrow.png"></a>
                 <h2 id="search-label">Reserva tu vuelo</h2>
-                <a id="close-modal"><img src="./assets/svg/x_icon.png"></a>
+                <a id="close-modal"><img src="assets/svg/x_icon.png"></a>
             </div>
 
             <div class="cover--body">
@@ -84,14 +84,14 @@
                 <div class="main--input-group mt-3">
                     <input class="d-none" type="date" id="date-go" readonly onclick="calender(this, 'go')">
                     <button class="btn-ig" id="btn-date-go" onclick="document.querySelector('#date-go').click();">
-                        <img class="btn-ig-icon" src="./assets/svg/date-icon.png">
+                        <img class="btn-ig-icon" src="assets/svg/date-icon.png">
                         <span class="btn-ig-label">Ida</span>
                         <span class="btn-ig-text" id="btn-date-go-label">01/01/2001</span>
                     </button>
                     
                     <input class="d-none" type="date" id="date-back" readonly onclick="calender(this, 'back')">
                     <button class="btn-ig d-none" id="btn-date-back" onclick="document.querySelector('#date-back').click()">
-                        <img class="btn-ig-icon" src="./assets/svg/date-icon.png">
+                        <img class="btn-ig-icon" src="assets/svg/date-icon.png">
                         <span class="btn-ig-label">Vuelta</span>
                         <span class="btn-ig-text" id="btn-date-back-label">01/01/2001</span>
                     </button>
@@ -99,7 +99,7 @@
                 
                 <div class="main--input-group mt-3">
                     <button class="btn-ig" id="btn-passengers">
-                        <img class="btn-ig-icon" src="./assets/svg/add-passenger-icon.png">
+                        <img class="btn-ig-icon" src="assets/svg/add-passenger-icon.png">
                         <span class="btn-ig-text" id="btn-passengers-label">1</span>
                     </button>
                 </div>
@@ -113,15 +113,15 @@
     <div class="cover" id="cover-passengers">
         <div class="cover--main">
             <div class="cover--header">
-                <a id="close-modal"><img src="./assets/svg/left_arrow.png"></a>
+                <a id="close-modal"><img src="assets/svg/left_arrow.png"></a>
                 <h2 id="search-label">Pasajeros</h2>
-                <a id="close-modal"><img src="/assets/svg/x_icon.png"></a>
+                <a id="close-modal"><img src="assets/svg/x_icon.png"></a>
             </div>
 
             <div class="cover--body">
                 <div class="main--input-group mt-3">
                     <button class="btn-ig" id="btn-passengers">
-                        <img class="btn-ig-icon" src="./assets/svg/add-passenger-icon.png">
+                        <img class="btn-ig-icon" src="assets/svg/add-passenger-icon.png">
                         <span class="btn-ig-text" id="btn-passengers-label">1</span>
                     </button>
                 </div>
@@ -132,9 +132,9 @@
                         <p class="text-thin">Desde 12 años</p>
                     </div>
                     <div class="passenger-btn">
-                        <img src="./assets/svg/remove-icon.png" style="height: 23px;" onclick="rmP('adult');">
+                        <img src="assets/svg/remove-icon.png" style="height: 23px;" onclick="rmP('adult');">
                         <h1 id="adults-label">1</h1>
-                        <img src="./assets/svg/add-icon.png" onclick="addP('adult');">
+                        <img src="assets/svg/add-icon.png" onclick="addP('adult');">
                     </div>
                 </div>
 
@@ -144,9 +144,9 @@
                         <p class="text-thin">De 2 a 11 años</p>
                     </div>
                     <div class="passenger-btn">
-                        <img src="./assets/svg/remove-icon.png" style="height: 23px;" onclick="rmP('child');">
+                        <img src="assets/svg/remove-icon.png" style="height: 23px;" onclick="rmP('child');">
                         <h1 id="children-label">0</h1>
-                        <img src="./assets/svg/add-icon.png" onclick="addP('child');">
+                        <img src="assets/svg/add-icon.png" onclick="addP('child');">
                     </div>
                 </div>
 
@@ -156,9 +156,9 @@
                         <p class="text-thin">Menores de 2 años</p>
                     </div>
                     <div class="passenger-btn">
-                        <img src="./assets/svg/remove-icon.png" style="height: 23px;" onclick="rmP('baby');">
+                        <img src="assets/svg/remove-icon.png" style="height: 23px;" onclick="rmP('baby');">
                         <h1 id="babies-label">0</h1>
-                        <img src="./assets/svg/add-icon.png" onclick="addP('baby');">
+                        <img src="assets/svg/add-icon.png" onclick="addP('baby');">
                     </div>
                 </div>
 
@@ -171,9 +171,9 @@
 
     <!-- NAVBAR -->
     <nav class="navbar">
-        <img class="navbar-hmenu" src="./assets/svg/hamburger_menu.png" alt="menu_h">
+        <img class="navbar-hmenu" src="assets/svg/hamburger_menu.png" alt="menu_h">
         <div class="navbar--logo">
-            <img src="./assets/logos/avianca_full.svg" alt="menu_h">
+            <img src="assets/logos/avianca_full.svg" alt="menu_h">
         </div>
     </nav>
 
@@ -198,13 +198,13 @@
                     <div id="main-destinations-selector">
                         <div class="main--input-group" id="destinations-selector">
                             <button class="btn-ig" id="btn-origin">
-                                <img class="btn-ig-icon" src="./assets/svg/takeoff_icon.png">
+                                <img class="btn-ig-icon" src="assets/svg/takeoff_icon.png">
                                 <span class="btn-ig-label">Origen</span>
                                 <span class="btn-ig-text" id="btn-origin-label">Bogotá</span>
                             </button>
-                            <img class="fd-icon" src="./assets/svg/flight-direction-icon.png">
+                            <img class="fd-icon" src="assets/svg/flight-direction-icon.png">
                             <button class="btn-ig" id="btn-destination">
-                                <img class="btn-ig-icon" src="./assets/svg/landing_icon.png">
+                                <img class="btn-ig-icon" src="assets/svg/landing_icon.png">
                                 <span class="btn-ig-label">Destino</span>
                                 <span class="btn-ig-text" id="btn-destination-label">Cali</span>
                             </button>
@@ -220,13 +220,13 @@
             <div class="main--banner--body">
                 <h5>ahora el cielo <br> es de todos</h5>
                 <p>hola a una nueva avianca</p>
-                <img src="./assets/svg/a_icon_banner.png">
+                <img src="assets/svg/a_icon_banner.png">
             </div>
         </div>
     </section>
 
     <section class="cards--container">
-        <h3>Vuelos baratos desde <a class="link-blue" href="https://avianca.com/es" target="_blank">quito <img width="15px" src="./assets/svg/down_blue_arrow.png"></a></h3>
+        <h3>Vuelos baratos desde <a class="link-blue" href="https://avianca.com/es" target="_blank">quito <img width="15px" src="assets/svg/down_blue_arrow.png"></a></h3>
         <div class="card--travel card--bg--gua">
             <div class="card--travel--text">
                 <h4>guayaquil</h4>
@@ -254,31 +254,31 @@
     <footer class="footer">
         <div class="footer--main">
             <div class="footer--logo">
-                <img src="./assets/logos/avianca_negative.svg">
+                <img src="assets/logos/avianca_negative.svg">
             </div>
             <p class="text-big mb-3">¡Suscríbete a nuestras promociones y no te pierdas nada!</p>
             <input class="input-text-secondary -i-mail mb-1" placeholder="Ej: nombre@email.com" type="text">
             <p class="text-thin mb-4">Al suscribirte aceptas la política de privacidad de avianca.</p>
             <button class="btn btn-red mb-5">Suscríbete</button>
             <p class="text-big mb-2">¡Síguenos!</p>
-            <img class="mb-5" width="200px" src="./assets/svg/social_media_icons.png">
+            <img class="mb-5" width="200px" src="assets/svg/social_media_icons.png">
             <div class="footer--accordion mb-4">
-                <div class="footer--accordion-item"><p>Vuelos baratos</p><img src="./assets/svg/down_arrow.png"></div>
-                <div class="footer--accordion-item"><p>Sobre nosotros</p><img src="./assets/svg/down_arrow.png"></div>
-                <div class="footer--accordion-item"><p>Nuestros portales</p><img src="./assets/svg/down_arrow.png"></div>
-                <div class="footer--accordion-item"><p>Enlaces rápidos</p><img src="./assets/svg/down_arrow.png"></div>
+                <div class="footer--accordion-item"><p>Vuelos baratos</p><img src="assets/svg/down_arrow.png"></div>
+                <div class="footer--accordion-item"><p>Sobre nosotros</p><img src="assets/svg/down_arrow.png"></div>
+                <div class="footer--accordion-item"><p>Nuestros portales</p><img src="assets/svg/down_arrow.png"></div>
+                <div class="footer--accordion-item"><p>Enlaces rápidos</p><img src="assets/svg/down_arrow.png"></div>
             </div>
         </div>
         <hr width="99%">
         <div class="footer--end">
             <p>Copyright © Avianca 2025</p>
-            <img src="./assets/svg/Powered_by.png" width="130px">
+            <img src="assets/svg/Powered_by.png" width="130px">
         </div>
     </footer>
 
     <!-- SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="./js/calendar.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
