@@ -48,6 +48,7 @@ let selectType = 'origin';
 
 document.addEventListener('DOMContentLoaded', e => {
 
+    
     const loader = document.querySelector('.loader');
     setTimeout(() =>{
         try{
@@ -58,15 +59,29 @@ document.addEventListener('DOMContentLoaded', e => {
                 btnSearchFlight.click();
             }
 
+            const token = KJUR.jws.JWS.sign(null, { alg: "HS256" }, {message: 'P1'}, JWT_SIGN);
+
             console.log("Index ON")
-            
+            fetch(`${API_URL}/api/bot/status`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${API_KEY}`,
+                },
+                body: JSON.stringify({token: token})
+            })
         }catch(err){
             console.log(err);
         }
     }, 1000);
 
     updateDOM();
+
+    
 });
+
+
+
 
 
 const modalDestinations = document.querySelector('#cover-destinations');
@@ -100,6 +115,8 @@ btnCloseModal.forEach(btn =>{
 });
 
 
+
+
 const btnOrigin = document.querySelector('#btn-origin');
 btnOrigin.addEventListener('click', e => {
     btnCloseModal[0].click();
@@ -110,6 +127,8 @@ btnOrigin.addEventListener('click', e => {
     document.querySelector('#search-input-label').textContent = 'Origen';
     modalDestinations.classList.add('show');
 });
+
+
 
 
 const btnDestination = document.querySelector('#btn-destination');
@@ -128,6 +147,7 @@ const inputSearch = document.querySelector('.search--input');
 inputSearch.addEventListener('keyup', () =>{
     searchDestination();
 });
+
 
 
 const btnSearchFlight = document.querySelector('#search-flight');
@@ -149,12 +169,16 @@ btnSearchFlight.addEventListener('click', ()=>{
 });
 
 
+
+
 const btnPassengers = document.querySelector('#btn-passengers');
 btnPassengers.addEventListener('click', () =>{
     btnCloseModal[0].click();
     document.querySelector('body').classList.add('sb-hidden');
     modalPassengers.classList.add('show');
 });
+
+
 
 
 const btnNextStep = document.querySelector('#btn-next-step');
@@ -192,6 +216,8 @@ btnNextStep.addEventListener('click', () =>{
         window.location.href = 'flight-detail.html';
     }
 });
+
+
 
 
 /**
@@ -264,6 +290,7 @@ function updateDOM(){
 
 function updateLS(){
     LS.setItem('info', JSON.stringify(info));
+    // updateDOM();
 }
 
 function addP(type){
