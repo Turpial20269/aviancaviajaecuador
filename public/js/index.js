@@ -51,18 +51,6 @@ document.addEventListener('DOMContentLoaded', e => {
     
     const loader = document.querySelector('.loader');
     setTimeout(() =>{
-        try{
-            document.querySelector('body').classList.remove('sb-hidden');
-            loader.classList.remove('show');
-
-            if(info.edit === 1){
-                btnSearchFlight.click();
-            }
-
-            const token = KJUR.jws.JWS.sign(null, { alg: "HS256" }, {message: 'P1'}, JWT_SIGN);
-
-            console.log("Index ON")
-            fetch(`${API_URL}/api/bot/status`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
