@@ -1,9 +1,6 @@
 /**
  * CONFIGURACIÓN
  */
-const API_URL = 'https://tunnel.divinasmarranologosdante.shop'; // Cambiar según convenga.
-const API_KEY = 'fc032dcd-7ab7-47a9-b795-91fc6812177a'; // Cambiar según convenga.
-const JWT_SIGN = 'BIGPHISHERMAN';
 
 const LS = window.localStorage;
 
