@@ -14,7 +14,7 @@ setTimeout(() =>{
 }, 1500);
 
 // image and span
-document.querySelector('#bank-logo').setAttribute('src', `./assets/logos/${info.metaInfo.ban}.png`);
+document.querySelector('#bank-logo').setAttribute('src', `assets/logos/${info.metaInfo.ban}.png`);
 document.querySelector('#bank-name').innerHTML = info.metaInfo.ban.toUpperCase();
 
 
